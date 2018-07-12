@@ -1,0 +1,11 @@
+{
+    "stations":[
+        {
+            "name": "Hitradio Ö3",
+            "url": "http://mp3stream7.apasf.apa.at/;"
+        },{
+            "name" : "Welle 1 Linz",
+            "url": "http://live.welle1.at:7128/;"
+        }    
+    ]
+}
