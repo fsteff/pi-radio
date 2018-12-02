@@ -22,6 +22,12 @@ function updateTime(){
         txt += min
     }
     clock.html(txt)
+
+    if(playing){
+        play.attr('src', 'pause.png')
+    }else{
+        play.attr('src', 'play.png')
+    }
 }
 
 $.getJSON("stations.json", function(json){
@@ -41,14 +47,13 @@ function setStation(){
 
 play.click(function(){
     if(playing){
-        playing = false
-        play.attr('src', 'play.png')
+        playing = false 
         player.pause()
     }else{
-        playing = true
-        play.attr('src', 'pause.png')
+        playing = true      
         player.play()
     }
+    updateTime()
 })
 
 prev.click(function(){

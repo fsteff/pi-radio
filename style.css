@@ -20,14 +20,16 @@ audio{
     position: relative;
     float: left;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -10px);
+    margin: 0;
+    padding: 0;
 }
 
 #station{
     position: absolute;
     float: left;
     left: 0;
-    width: 100%;
+    width: 90%;
     bottom: 0;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
