@@ -36,9 +36,9 @@ $.getJSON("stations.json", function(json){
 })
 
 function setStation(){
-    player.src = stations[stationNum].url
     station.innerHTML = stations[stationNum].name
     if(playing){
+        player.src = stations[stationNum].url
         player.play()
     }else{
         player.pause()
@@ -49,23 +49,25 @@ play.click(function(){
     if(playing){
         playing = false 
         player.pause()
+        player.src = ''
     }else{
-        playing = true      
+        playing = true
+        player.src = stations[stationNum].url
         player.play()
     }
     updateTime()
 })
 
 prev.click(function(){
-    stationNum = (stationNum - 1)%stations.length 
+    stationNum = (stationNum - 1) % stations.length 
     setStation()
 })
 
 next.click(function(){
-    stationNum = (stationNum + 1)%stations.length 
+    stationNum = (stationNum + 1) % stations.length 
     setStation()
 })
-
+/*
 clock.click(function(){
     if(! fullscreen){
         var el = document.documentElement,
@@ -78,3 +80,4 @@ clock.click(function(){
         fullscreen = true
     }
 })
+*/
